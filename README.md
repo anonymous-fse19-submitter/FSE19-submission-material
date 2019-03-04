@@ -80,7 +80,7 @@ The possible combinations of those arguments are listed below (as example `appli
 
 The [run-experiment.sh](https://github.com/anonymous-fse19-submitter/FSE19-submission-material/blob/master/tedd/run-experiment.sh) script starts the docker container for the given application and removes it when the validation ends. When the validation ends, the script saves a directory on the `~/Desktop` with the application name, containing the results of the validation. The results folder contains the logs, the final dependency graph and the intermediate graphs obtained during the validation. 
 
-Suppose that you have run `./run-experiment.sh ppma tedd nlp_verb_only_baseline`. When the validation ends, move `~/Desktop/ppma/results/<date>-tedd` and look for `logs_tedd_ppma.txt`. Then type `sed -n -e '/====/,/====/ p' logs_tedd_ppma.txt`. The command displays two blocks corresponding to validation and disconnected nodes dependency recovery. For each of them, there are some statistics among which the validation time, number of manifest dependencies and so on. An example of output is shown below:
+Suppose that you have run `./run-experiment.sh ppma tedd nlp_verb_only_baseline`. When the validation ends, move to the `~/Desktop/ppma/results/<date>-tedd` directory and look for `logs_tedd_ppma.txt`. Then type `sed -n -e '/====/,/====/ p' logs_tedd_ppma.txt`. The command displays two blocks corresponding to validation and disconnected nodes dependency recovery. For each of them, there are some statistics among which the validation time, number of manifest dependencies and so on. An example of output is shown below:
 
 ```
 ==================
@@ -121,7 +121,7 @@ The script [run-parallelization.sh](https://github.com/anonymous-fse19-submitter
 
 For example you can move to `~/workspace/FSE19-submission-material/tedd` and type `./run-parallelization.sh ppma nlp_verb_only_baseline`. The command will execute the unique test suites only for one configuration, namely `nlp_verb_only_baseline`. The execution takes approximately 6 minutes.
 
-As in the previous script the results are saved in the `~/Desktop` folder. Move to `~/Desktop/ppma/results/<date>-check_final_graph_correctness` and look for `logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. Then type `sed -n -e '/====/,/====/ p' logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. The command displays a block with statistics like worst case and average case speed-up factors and so on. An example of output is shown below:
+As in the previous script the results are saved in the `~/Desktop` folder. Move to the `~/Desktop/ppma/results/<date>-check_final_graph_correctness` directory and look for `logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. Then type `sed -n -e '/====/,/====/ p' logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. The command displays a block with statistics like worst case and average case speed-up factors and so on. An example of output is shown below:
 
 ```
 =====================================
