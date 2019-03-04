@@ -121,7 +121,7 @@ The script [run-parallelization.sh](https://github.com/anonymous-fse19-submitter
 
 For example you can move to `~/workspace/FSE19-submission-material/tedd` and type `./run-parallelization.sh ppma nlp_verb_only_baseline`. The command will execute the unique test suites only for one configuration, namely `nlp_verb_only_baseline`. The execution takes approximately 6 minutes.
 
-As in the previous script the results are saved in the `~/Desktop` folder. Move to `~/Desktop/ppma/results/<date>-check_final_graph_correctness` and look for `logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. Then type `sed -n -e '/====/,/====/ p logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. The command displays a block with statistics like worst case and average case speed-up factors and so on. An example of output is shown below:
+As in the previous script the results are saved in the `~/Desktop` folder. Move to `~/Desktop/ppma/results/<date>-check_final_graph_correctness` and look for `logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. Then type `sed -n -e '/====/,/====/ p' logs_nlp_verb_only_baseline_check_final_graph_correctness_ppma.txt`. The command displays a block with statistics like worst case and average case speed-up factors and so on. An example of output is shown below:
 
 ```
 =====================================
